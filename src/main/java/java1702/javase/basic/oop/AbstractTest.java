@@ -32,5 +32,5 @@ class SubAbstractTest extends AbstractTest {
         super.method1();
     }//覆盖
 }
-//什么时候使用抽象类
+//什么时候使用抽象类,抽象类对其所有子类做了限制和约束
 

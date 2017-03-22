@@ -1,6 +1,5 @@
 package java1702.javase.basic.oop;
 
-import com.sun.media.sound.SoftTuning;
 
 /**
  * Created by lixuanyu
@@ -18,6 +17,10 @@ public abstract class Shape {
         Triangle triangle = new Triangle(3.0,4.0,5.0);
         System.out.println(triangle.getArea());
         System.out.println(triangle.getPerimeter());
+        Shape shape = new Square(3.0);//多态的一种形式
+        System.out.println(shape.getPerimeter());
+        System.out.println(shape.getArea());
+
 
 
     }
@@ -64,7 +67,7 @@ class Triangle extends Shape {
     @Override
     public double getArea() {
         double s = (a + b + c) / 2;
-        return (s * Math.sqrt((s - a) * (s - b) * (s - c)));//海伦公式
+        return (s * Math.sqrt((s - a) * (s - b) * (s - c)));//海伦-秦九韶公式
     }
 }
 
@@ -79,7 +82,7 @@ class Rectangle extends Shape {
 
     @Override
     public double getPerimeter() {
-        return length + width;
+        return (length + width) * 2;
     }
 
     @Override
