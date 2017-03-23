@@ -20,7 +20,8 @@ class SuperClass {
 
 class SubClass extends SuperClass {
     public void method() {
-        System.out.println("method in sub class...");//动态多样性，在父类和子类中存在同名方法，重写(overwrite)，覆盖 (override),返回类型也必须一样
+        System.out.println("method in sub class...");//动态多样性，在父类和子类中存在同名方法，
+        // 重写(overwrite)，覆盖 (override),返回类型也必须一样
     }
 }
 

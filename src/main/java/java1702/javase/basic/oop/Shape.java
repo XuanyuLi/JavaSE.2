@@ -1,33 +1,14 @@
 package java1702.javase.basic.oop;
-
-
 /**
  * Created by lixuanyu
  * on 2017/3/21.
  */
-public abstract class Shape {
-    public abstract double getPerimeter();
-
-    public abstract double getArea();
-
-    public static void main(String[] args) {
-        CircleTest circleTest = new CircleTest(6);
-        System.out.println(circleTest.getArea());
-        System.out.println(circleTest.getPerimeter());
-        Triangle triangle = new Triangle(3.0,4.0,5.0);
-        System.out.println(triangle.getArea());
-        System.out.println(triangle.getPerimeter());
-        Shape shape = new Square(3.0);//多态的一种形式
-        System.out.println(shape.getPerimeter());
-        System.out.println(shape.getArea());
-
-
-
-    }
-
+public interface Shape {
+    double getPerimeter();
+    double getArea();
 }
 
-class CircleTest extends Shape {
+class CircleTest implements Shape {
     private double radius;
     private double pi = 3.14;
 
@@ -44,9 +25,15 @@ class CircleTest extends Shape {
     public double getArea() {
         return pi * radius * radius;//Math.pow(radius,2)
     }
+
+    public static void main(String[] args) {
+        CircleTest circleTest = new CircleTest(6);
+        System.out.println(circleTest.getArea());
+        System.out.println(circleTest.getPerimeter());
+    }
 }
 
-class Triangle extends Shape {
+class Triangle implements Shape {
     private double a;
     private double b;
     private double c;
@@ -71,7 +58,7 @@ class Triangle extends Shape {
     }
 }
 
-class Rectangle extends Shape {
+class Rectangle implements Shape {
     private double length;
     private double width;
 
@@ -91,7 +78,7 @@ class Rectangle extends Shape {
     }
 }
 
-class Square extends Shape {
+class Square implements Shape {
     private double length;
 
     public Square(double length) {

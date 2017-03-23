@@ -18,6 +18,7 @@ public class EE1 {
         x = random.nextInt();
         System.out.println(x);
          guess();
+
     }
     private static void guess() {
         System.out.println("请输入一个数");
