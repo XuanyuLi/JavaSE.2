@@ -3,7 +3,7 @@ package collection;
  * Created by lixuanyu
  * on 2017/3/27.
  */
-//数组是一个容器,同一种值的集合,数组是静态的，数据初始化之后，元素的个数不变
+//数组是一个容器,就是同一种值的集合,数组是静态的，数据初始化之后，元素的个数不变
 public class ArrayTest {
     public static void main(String[] args) {
        String[] strings = new String[10];
