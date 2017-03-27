@@ -11,6 +11,7 @@ public class CastTest {
 
     public static void main(String[] args) {
         int x = 1;
+        int z = 2;
         String s = Integer.toString(x);
         System.out.println(s);
         String s1 = "123";
@@ -18,5 +19,8 @@ public class CastTest {
         System.out.println(y);
         int y1 = Integer.parseInt(s1);
         System.out.println(y1);//parse 解析
+        String s2 = " " + x;
+        System.out.println(s2);
+
     }
 }
