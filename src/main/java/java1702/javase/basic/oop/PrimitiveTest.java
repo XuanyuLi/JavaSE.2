@@ -20,5 +20,6 @@ public class PrimitiveTest {
         method(primitiveTest);
         System.out.println("d:" + primitiveTest.s);
     }
+
 }
 //git 版本控制软件，github 托管代码的网站（gitlab,bitbucket)
