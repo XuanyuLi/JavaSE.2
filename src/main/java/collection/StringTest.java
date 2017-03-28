@@ -1,5 +1,7 @@
 package collection;
 
+import com.sun.media.sound.SoftTuning;
+
 /**
  * Created by lixuanyu
  * on 2017/3/28.
@@ -15,6 +17,15 @@ public class StringTest {
         String s1 = "Hello";//HELLO
         System.out.println(toLowerCase(s1));
         System.out.println(s1.toUpperCase());
+        String s2 = "abcdefg";
+        System.out.println(s2.charAt(3));
+        System.out.println(s2.codePointAt(3));
+        System.out.println(s2.concat("hijklmn"));
+        System.out.println(s2.contains("wer"));
+        System.out.println(s2.endsWith("g"));
+        System.out.println(s2.equals("abcdefg"));
+        System.out.println(s2.equalsIgnoreCase("ABCDEFG"));
+        System.out.println(String.format(s2, "abcd"));
 
     }
 
