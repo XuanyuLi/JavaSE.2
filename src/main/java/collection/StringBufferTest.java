@@ -17,5 +17,18 @@ public class StringBufferTest {
         System.out.println(stringBuffer.reverse());//左右颠倒顺序输出
         stringBuffer.setCharAt(0,'a');
         System.out.println(stringBuffer);
+        String s2 = "abcdefg";
+        String[] strings = s2.split("\\s");
+        for (String string : strings) {
+            System.out.println(string);
+        }
+    }
+
+    private static String reverse(String origin) {
+        String s = "abcdefg";
+        String[] strings = s.split("\\s");
+        System.out.println(s);
+
+        return "";
     }
 }
