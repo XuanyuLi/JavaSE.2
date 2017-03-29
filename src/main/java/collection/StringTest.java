@@ -40,6 +40,17 @@ public class StringTest {
         for (String string : strings) {
             System.out.println(string);
         }
+        String s1 = "hello";
+//        String s2 = "hello";
+//        System.out.println(s1.equals(s2));
+//        System.out.println(s1 == s2);
+        String s2 = new String(s1);
+        System.out.println(s1.equals(s2));
+        System.out.println(s1==s2);//比较多是地址
+        String string = "test...";
+        System.out.println(string);
+        string = "test";
+        System.out.println(string);//原来的“test...”是不可变的，变的是string的指向。gc garbage collection 垃圾回收机制  memory leak 内存泄漏（C语言）
     }
 
     private static String toLowerCase(String origin) {
@@ -53,3 +64,4 @@ public class StringTest {
         return new String(chars);
     }
 }
+//String pool  字符串池  immutable 不可变的   C语言的两大难点，指针（pointer）和内存泄漏
