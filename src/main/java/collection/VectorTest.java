@@ -11,16 +11,18 @@ import java.util.Vector;
 //Vector 向量
 public class VectorTest {
     public static void main(String[] args) {
-        Vector<String> vector = new Vector<>();
+        Vector<String> vector = new Vector<>();//<>里边放的是类，可以是其他类，可以是基本数据类型的封装类，
+        // 容量可以自动增大，每次扩大的是以前容量的一倍
         vector.add("hi");//元素，组件，jdk5后加入泛型
         vector.add("hello");
         vector.add("test");
         vector.add("hi");
         System.out.println(vector.get(0));
         System.out.println(vector.size());//判断当前有多少个元素，可以重复
-        for (String aVector : vector) {
-            System.out.println(aVector);
-        }
+        System.out.println(vector.remove(2));
+//        for (String aVector : vector) {
+//            System.out.println(aVector);
+//        }
         System.out.println(vector.size());
         //capacity  容量，能力
         System.out.println(vector.capacity());
