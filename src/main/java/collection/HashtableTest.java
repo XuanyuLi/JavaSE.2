@@ -20,5 +20,4 @@ public class HashtableTest {
             System.out.println(integer + "->" + hashtable.get(integer));//哈希表的输出是无序的
         }
     }
-
 }
