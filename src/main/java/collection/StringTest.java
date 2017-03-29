@@ -30,11 +30,16 @@ public class StringTest {
 //
 //    }
     public static void main(String[] args) {
-        String s = "hello";
-        //match 匹配
+        String s = "hello world!";
+        //match 匹配,spilt 根据给定的正则拆分成字符串数组(用的比较多)
         System.out.println(s.matches("\\w+"));
         System.out.println(s.replaceAll("l","y"));
         System.out.println(s.replaceFirst("l","b"));
+        String[] strings = s.split("l");//  \\s   space 空格
+        System.out.println(strings.length);
+        for (String string : strings) {
+            System.out.println(string);
+        }
     }
 
     private static String toLowerCase(String origin) {
