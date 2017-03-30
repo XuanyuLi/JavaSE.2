@@ -1,8 +1,4 @@
 package collection;
-
-import java.awt.*;
-import java.util.Random;
-
 /**
  * Created by lixuanyu
  * on 2017/3/28.
@@ -31,7 +27,7 @@ public class _2DArray {
         } ;
         for (int i = 0; i < doubles.length; i++) {
             for (int j = 0; j < doubles[i].length; j++) {
-                System.out.print(doubles[i][j] + "\t");
+                System.out.println(doubles[i][j] + "\t");
             }
             System.out.println();
         }
@@ -43,7 +39,6 @@ public class _2DArray {
                 System.out.print(strings[i][j] + "\t");
             }
             System.out.println();
-
         }
     }
 }
