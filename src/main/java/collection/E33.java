@@ -13,23 +13,39 @@ import java.util.Arrays;
            1 2 1
           1 3 3 1
          1 4 6 4 1
-         .........（略）
-         数组
          */
 public class E33 {
     public static void main(String[] args) {
-        int[] array1 = {1};
-        int[] array2 = {1, 1};
-        int[] array3 = {1, 2, 1};
-        int[] array4 = {1, 3, 3, 1};
-        int[] array5 = new int[5];
-        for (int i = 0; i < array5.length; i++) {
-            if (i == 0 || i == array5.length - 1) {
-                array5[i] = 1;
-            } else {
-                array5[i] = array4[i - 1] + array4[i];
+        int n = 10;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < (n -1) - i; j++) {
+                System.out.print(" ");
             }
+            for (int j : getArray(i + 1)) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
         }
-        System.out.println(Arrays.toString(array5));
     }
+
+    /**
+     * @param n 第 n 行
+     * @return 第 n 行的数组
+     */
+    private static int[] getArray(int n) {
+        if (n == 1) {
+            return new int[]{1}; //  {1, 2, 3} [1, 2, 3] Arrays.toString(ints);
+        } else {
+            int[] array = new int[n];
+            for (int i = 0; i < array.length; i++) {
+                if (i == 0 || i == array.length - 1) {
+                    array[i] = 1;
+                } else {
+                    array[i] = getArray(n - 1)[i - 1] + getArray(n - 1)[i];
+                }
+            }
+            return array;
+        }
+    }
+
 }
