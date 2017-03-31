@@ -8,22 +8,22 @@ package collection;
 public class ArrayVector {
     private static final int DEFAULT_CAPACITY = 10;
     private String[] strings;
-    private int capcity;
+    private int capacity;
     private int size;
 
     public ArrayVector() {
         strings = new String[DEFAULT_CAPACITY];
-        capcity = DEFAULT_CAPACITY;
+        capacity = DEFAULT_CAPACITY;
     }
 
     public ArrayVector(int initialCapacity) {
         strings = new String[initialCapacity];
-        capcity = initialCapacity;
+        capacity = initialCapacity;
     }
     public void add(String string) {
-        if (size == capcity) {
-            String[] newStrings = new String[capcity*2];
-            capcity *=2;
+        if (size == capacity) {
+            String[] newStrings = new String[capacity*2];
+            capacity *=2;
             System.arraycopy(strings,0,newStrings,0,strings.length);
             strings = newStrings;
         }
@@ -32,7 +32,16 @@ public class ArrayVector {
 
     }
 
-    public void remove(int index) {
+    public String remove(int index) {
+        if (index >= size) {
+            System.out.println("error.");
+            System.exit(0);
+        }
+        String s = strings[index];
+        System.arraycopy(strings,index+1,strings,index,size-index-1);
+        strings[size-1] = null;
+        size--;
+        return s;
 
     }
 
@@ -44,19 +53,27 @@ public class ArrayVector {
         return strings[index];
     }
 
+    public String set(int index,String element) {
+        if (index >= size) {
+            System.out.println("error.");
+            System.exit(0);
+        }
 
-    public int size() {
-        return size;
+        String s = strings[index];
+        strings[index] = element;
+        return s;
     }
-
-
-
     public static void main(String[] args) {
         ArrayVector arrayVector = new ArrayVector();
         arrayVector.add("hello");
-        arrayVector.add("hi");
+        arrayVector.add("red");
+        arrayVector.add("yellow");
+        arrayVector.add("java");
+        arrayVector.remove(1);
+        System.out.println(arrayVector.set(1,"world"));
         System.out.println(arrayVector.get(0));
         System.out.println(arrayVector.get(1));
-        System.out.println(arrayVector.capcity);
+        System.out.println(arrayVector.capacity);
+
     }
 }

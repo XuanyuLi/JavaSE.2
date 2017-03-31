@@ -13,6 +13,7 @@ public class StringCopyTest {
         System.out.println(Arrays.toString(destArray));
         String[] strings = {"a","b","c","d","e","f","g","h","i","j"};
         System.arraycopy(strings,3,strings,2,7);
+        strings[9] = null;
         System.out.println(Arrays.toString(strings));
     }
 }
