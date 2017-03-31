@@ -1,6 +1,4 @@
-package collection;
-
-import com.sun.media.sound.SoftTuning;
+package java1702.javase.basic.collection;
 
 /**
  * Created by lixuanyu
@@ -50,7 +48,7 @@ public class StringTest {
         String string = "test...";
         System.out.println(string);
         string = "test";
-        System.out.println(string);//原来的“test...”是不可变的，变的是string的指向。gc garbage collection 垃圾回收机制  memory leak 内存泄漏（C语言）
+        System.out.println(string);//原来的“test...”是不可变的，变的是string的指向。gc garbage java1702.javase.basic.collection 垃圾回收机制  memory leak 内存泄漏（C语言）
     }
 
     private static String toLowerCase(String origin) {

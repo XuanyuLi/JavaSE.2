@@ -1,4 +1,4 @@
-package collection;
+package java1702.javase.basic.collection;
 
 import java.util.Scanner;
 

@@ -1,6 +1,4 @@
-package collection;
-
-import java.util.Arrays;
+package java1702.javase.basic.collection;
 
 /**
  * Created by lixuanyu
