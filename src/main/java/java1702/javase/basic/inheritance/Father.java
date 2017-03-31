@@ -29,8 +29,5 @@ class ExtendsTest {
         Son son = new Son();
         System.out.println(son.money);
         son.coding();
-
-
-
     }
 }
