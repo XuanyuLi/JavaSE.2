@@ -24,6 +24,8 @@ public class ArrayTest {
             String month = months[i];
             System.out.println(month);
         }
+        int[] ints1 = new int[5];
+         
 
     }
 }

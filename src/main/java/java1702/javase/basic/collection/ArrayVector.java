@@ -52,7 +52,6 @@ public class ArrayVector {
         }
         return strings[index];
     }
-
     public String set(int index,String element) {
         if (index >= size) {
             System.out.println("error.");
@@ -74,6 +73,5 @@ public class ArrayVector {
         System.out.println(arrayVector.get(0));
         System.out.println(arrayVector.get(1));
         System.out.println(arrayVector.capacity);
-
     }
 }
