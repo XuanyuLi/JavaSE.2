@@ -40,5 +40,8 @@ public class _2DArray {
             }
             System.out.println();
         }
+//        int[] ints1 = new int[]{1,2,3};
+//        int[] ints2 = new int[3];
+//        ints2 = new int[]{1, 2, 3};
     }
 }
