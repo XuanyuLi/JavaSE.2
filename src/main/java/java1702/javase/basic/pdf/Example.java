@@ -13,6 +13,7 @@ public class Example {
         String string = scanner.nextLine();
         switch (string) {
             case "abc":
+            case "def":
                 System.out.println(string + "员工在维护部门");
                 break;
         }
