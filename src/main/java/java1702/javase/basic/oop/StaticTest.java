@@ -32,4 +32,5 @@ class ManKind {
     public static boolean married;
 
 }
-//是否静态的对类成员变量进行分类可分两种：一种是被static修饰的变量，叫静态变量或类变量；另一种是没有被static修饰的变量，叫实例变量
+//是否静态的对类成员变量进行分类可分两种：一种是被static修饰的变量，叫静态变量或类变量；
+// 另一种是没有被static修饰的变量，叫实例变量
