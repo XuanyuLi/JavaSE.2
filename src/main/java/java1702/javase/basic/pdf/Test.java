@@ -1,5 +1,7 @@
 package java1702.javase.basic.pdf;
 
+import java.util.Scanner;
+
 /**
  * Created by lixuanyu
  * on 2017/4/5.
@@ -12,6 +14,16 @@ public class Test {
         System.out.println(i);
         System.out.println(Test.i);
         System.out.println(c);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请出入A的值：");
+        int p = scanner.nextInt();
+        System.out.println("请输入B的值：");
+        int d = scanner.nextInt();
+        p = p^d;
+        d = d^p;
+        p = p^d;
+        System.out.println(p);
+        System.out.println(d);
     }
 }
 //转义字符：\t制表符;  \r回车;  \n换行;  \b退格;  \f换页。
