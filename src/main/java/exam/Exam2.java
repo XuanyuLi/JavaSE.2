@@ -10,8 +10,12 @@ public class Exam2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入一个字符串：");
-        String string = scanner.nextLine();
-        System.out.println(string.toLowerCase());
-        System.out.println(string.toUpperCase());
+        String s = scanner.nextLine();
+        System.out.println(s);
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            char aChar = chars[i];
+
+        }
     }
 }
