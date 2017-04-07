@@ -4,7 +4,7 @@ package java1702.javase.basic.newoop;
  * Created by lixuanyu
  * on 2017/4/7.
  */
-public class ParameterPassTest {
+public class ParameterPassTest {//parameter 参数
     private static void test(int i) {
         System.out.println("b:" + i);
         i++;
@@ -38,6 +38,7 @@ public class ParameterPassTest {
         System.out.println("a:" + integer);
         integerTest(integer);
         System.out.println("d:" + integer);
-
     }
 }
+//String类型以及基本数据类型的封装类也是值传递，方法中的改变同样不会影响到实际参数
+//shift + F6 快速修改
