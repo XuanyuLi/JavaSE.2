@@ -8,37 +8,35 @@ package java1702.javase.basic.newoop;
 //本质上还是值传递（传递的是对象的地址的值→特殊的值）
 public class Main {
     public static void main(String[] args) {
-            Foo f = new Foo("f");
-            System.out.println(f.getS()); // "f"
-            changeReference(f);
-            modifyReference(f);
-            System.out.println(f.getS()); // "f"
-        }
+        Foo f = new Foo("f");
+        System.out.println(f.getS()); // "f"
+        changeReference(f);
+        modifyReference(f);
+        System.out.println(f.getS()); // "f"
+    }
+    private static void changeReference(Foo a) {
+        System.out.println(a.getS()); // "f"
+        Foo b = new Foo("b");
+        a = b;
+    }
+    private static void modifyReference(Foo c) {
+        c.setAttribute("c");
+    }
+}
 
-        private static void changeReference(Foo a) {
-            System.out.println(a.getS()); // "f"
-            Foo b = new Foo("b");
-            a = b;
-        }
+class Foo {
+    private String s;
 
-        private static void modifyReference(Foo c) {
-            c.setAttribute("c");
-        }
+    public Foo(String s) {
+        this.s = s;
     }
 
-    class Foo {
-        private String s;
+    public void setAttribute(String s) {
+        this.s = s;
+    }
 
-        public Foo(String s) {
-            this.s = s;
-        }
-
-        public void setAttribute(String s) {
-            this.s = s;
-        }
-
-        public String getS() {
-            return s;
-        }
+    public String getS() {
+        return s;
+    }
 }
 
