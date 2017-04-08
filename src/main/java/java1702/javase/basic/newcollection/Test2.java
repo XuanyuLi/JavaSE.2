@@ -13,7 +13,7 @@ public class Test2 {
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             char aChar = chars[i];
-            String s1 = aChar + "";Character.toString(aChar);
+            String s1 = aChar + "";//Character.toString(aChar);
             if (s1.toLowerCase().equals(s1)) {
                 s1 = s1.toUpperCase();
                 chars[i] = s1.toCharArray()[0];
