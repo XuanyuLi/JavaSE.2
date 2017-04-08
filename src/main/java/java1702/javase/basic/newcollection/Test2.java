@@ -27,5 +27,6 @@ public class Test2 {
         chars[chars.length - 1] = temp;
 
         System.out.println(String.valueOf(chars ));
+        //网慢
     }
 }
