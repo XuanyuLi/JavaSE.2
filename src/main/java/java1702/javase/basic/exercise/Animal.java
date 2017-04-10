@@ -1,4 +1,4 @@
-package exam;
+package java1702.javase.basic.exercise;
 
 /**
  * Created by lixuanyu
