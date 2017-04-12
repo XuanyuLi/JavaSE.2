@@ -27,3 +27,4 @@ public class HashMapTest {
         }
     }
 }
+//Map 无序，键值对，键不可重复
