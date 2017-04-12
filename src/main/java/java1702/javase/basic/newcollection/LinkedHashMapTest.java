@@ -16,5 +16,6 @@ public class LinkedHashMapTest {
         for (Map.Entry<Integer, String> integerStringEntry : hashMap.entrySet()) {
             System.out.println(integerStringEntry);
         }
+
     }
 }
