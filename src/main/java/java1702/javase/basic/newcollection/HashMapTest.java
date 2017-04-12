@@ -25,6 +25,7 @@ public class HashMapTest {
         for (Map.Entry<Integer, String> integerStringEntry : hashMap.entrySet()) {
             System.out.println(integerStringEntry);
         }
+        System.out.println(hashMap.entrySet());
     }
 }
 //Map 无序，键值对，键不可重复
