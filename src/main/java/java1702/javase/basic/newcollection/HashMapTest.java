@@ -28,4 +28,5 @@ public class HashMapTest {
         System.out.println(hashMap.entrySet());
     }
 }
-//Map 无序，键值对，键不可重复
+//Map 无序，键值对，键不可重复,哈希表不可以放空键和空值，hashMap 既可以放空键也可以放空值，LinkedHashSet和LinkedHashMap都是按照
+//添加顺序进行排序的
