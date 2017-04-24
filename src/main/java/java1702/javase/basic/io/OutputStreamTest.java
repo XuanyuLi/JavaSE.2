@@ -13,7 +13,7 @@ public class OutputStreamTest {
         try { // Shift + Ctrl + arrow | Shift + Option + arrow
             outputStream = new FileOutputStream("new1");
             outputStream.write(98);
-            outputStream.flush(); //
+//            outputStream.flush();
         } catch (java.io.IOException e) {
             e.printStackTrace();
         } finally {

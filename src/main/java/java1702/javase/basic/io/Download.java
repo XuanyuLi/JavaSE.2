@@ -23,12 +23,20 @@ public class Download {
 //
 //    }
     public static void main(String[] args) throws FileNotFoundException {
-        Reader reader = new FileReader(IMAGE_URL);
         try {
             URL url = new URL(IMAGE_URL);
-            System.out.println(url.openStream());
-
-        } catch (IOException e) {
+            try {
+                try (InputStream inputStream = url.openStream();
+                OutputStream outputStream = new FileOutputStream("test.jpg")) {
+                    int i;
+                    if ((i = inputStream.read()) != -1) {
+                        outputStream.write(i);
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (MalformedURLException e) {
             e.printStackTrace();
         }
     }
