@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var patt = /[^0-9]/g;
+        console.log('ascDf123'.match(patt));
+        patt.compile('(red|green|blue)', 'gi');
+        console.log('redGreenbBlue'.match(patt));
+        var patt1 = /[\u4e00-\u9fbb]/;
+        console.log('春江花月夜，123456'.match(patt1));
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
