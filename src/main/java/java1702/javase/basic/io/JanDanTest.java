@@ -1,5 +1,6 @@
 package java1702.javase.basic.io;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,7 +18,7 @@ public class JanDanTest {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     if (line.contains("data-original=\"//")) {
-                        String imageURL = line.substring(line.indexOf("//tankr"), line.indexOf("jpg"));
+                        String imageURL = "http:" + line.substring(line.indexOf("//tankr"), line.indexOf("jpg") + 3);
                         System.out.println(imageURL);
                     }
                 }
@@ -25,6 +26,14 @@ public class JanDanTest {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void download(String imageUrl) {
+        try {
+            URL url = new URL(imageUrl);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
