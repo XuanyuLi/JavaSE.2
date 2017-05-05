@@ -6,7 +6,8 @@ package demo.a;
  */
 public class Test {
     public static void main(String[] args) {
-        Service service = new Service(new FloppyWriter());
+        Service service = new Service();
+        service.setFloppyWriter(new FloppyWriter());
         service.write();
     }
 }
