@@ -47,8 +47,8 @@ class Library extends Thread {
 
     @Override
     public void run() {
-//        output.print("Library print...");
-        output.scan("Library print...");
+        output.print("Library print...");
+//        output.scan("Library print...");
     }
 }
 
@@ -61,7 +61,7 @@ class University extends Thread {
 
     @Override
     public void run() {
-//        output.print("University print...");
-        output.scan("University print...");
+        output.print("University print...");
+//        output.scan("University print...");
     }
 }
