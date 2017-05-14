@@ -17,7 +17,6 @@ https://gifshow-static.download.ks-cdn.com/video/home-2.mp4
 */
 public class Test8 implements Runnable {
     private static final String URL_ONE = "https://gifshow-static.download.ks-cdn.com/video/home-1.mp4";
-    private static final String URL_TWO = "https://gifshow-static.download.ks-cdn.com/video/home-2.mp4";
     public static void main(String[] args) {
         for (int i = 0; i < 2; i++) {
             Thread thread = new Thread(new Test8());
